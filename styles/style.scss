@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  position: sticky;
+  background-color: white;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  box-shadow: 0 10px 6px -6px rgba(122, 121, 121, 0.7);
+
+  .logo {
+    margin-left: 1.7rem;
+    flex: 5 1 400px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  nav {
+    flex: 2 1 400px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      li {
+        a {
+          color: #09777d;
+          text-decoration: none;
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  section.backImage {
+    height: 90vh;
+    width: 100%;
+    background-image: url(../Public/Pictures/pexels-photo-416676.jpeg);
+    background-size: cover;
+    background-position: center;
+    .filter {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        color: white;
+        font-size: 2.5rem;
+      }
+      button.start {
+        margin-top: 2rem;
+        background-color: rgba(30, 234, 230, 0.25);
+        color: white;
+        font-size: 1.5rem;
+        // width: 1rem;
+        padding: 0.6rem 2rem;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  section.service {
+    .slogan {
+      margin-top: 1.3rem;
+      text-align: center;
+      h2 {
+        span {
+          color: #09777d;
+        }
+      }
+    }
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      //   border: 2px solid blue;
+      div.card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // width: 25vw;
+        flex: 1 1 25vw;
+        margin: 2rem 2rem 1rem;
+        // border: 2px solid red;
+        img {
+          width: 20vw;
+          height: 20vw;
+          border-radius: 50%;
+        }
+        div.word {
+          //   border: 2px solid grey;
+          display: flex;
+          flex-direction: column;
+          //--設定 word 裡面三個 content 平均分配高度
+          height: 40vh;
+          justify-content: space-between;
+          align-items: center;
+          //
+          margin: 1.5rem 0 1rem;
+          font-size: 1.25rem;
+          h2 {
+            font-weight: 900;
+            // text-decoration: underline;
+          }
+          a {
+            text-decoration: none;
+            background-color: #09777d;
+            color: white;
+            cursor: pointer;
+            margin-top: 1.7rem;
+            padding: 0.5rem 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gainsboro;
+  min-height: 30vh;
+  justify-content: space-around;
+
+  .logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  nav {
+    width: 70%;
+    text-align: center;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 150px;
+        a {
+          font-weight: 600;
+          color: black;
+          text-decoration: none;
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+  section.links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    a {
+      img {
+        width: 3.5vw;
+        height: 3.5vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 828px) {
+  header {
+    div.logo {
+      justify-content: center;
+      margin-left: 0;
+    }
+    nav {
+      margin: 10px;
+    }
+  }
+  main {
+    section.backImage {
+      div.filter {
+        h1 {
+          font-size: 1.8rem;
+        }
+        button.start {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  footer {
+    nav {
+      width: 50%;
+    }
+    section.links {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    div.logo {
+      justify-content: center;
+      margin-left: 0;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    nav {
+      ul {
+        li {
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.backImage {
+      div.filter {
+        h1 {
+          font-size: 1.3rem;
+        }
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+  footer {
+    div.logo-footer {
+      h1 {
+        font-size: 1.2rem;
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    nav {
+      width: 80%;
+      ul {
+        li {
+          a {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    section.links {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    section.service {
+      div.slogan {
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  footer {
+    div.logo-footer {
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    nav {
+      width: 70%;
+      ul {
+        li {
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    section.links {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  main {
+    section.service {
+      div.slogan {
+        h2 {
+          font-size: 0.9rem;
+        }
+      }
+
+      div.cards-container {
+        //------切換至手機版面時，讓一個 card 一個畫面
+        flex-wrap: wrap;
+
+        div.card {
+          img {
+            width: 50vw;
+            height: 50vw;
+          }
+          //------切換至手機版面時，讓一個 card 一個畫面
+          flex-basis: 100%;
+          //------
+          div.word {
+            h2 {
+              margin: 0.5rem 0;
+            }
+            width: 75vw;
+          }
+        }
+      }
+    }
+  }
+}
